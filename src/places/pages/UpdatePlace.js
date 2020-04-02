@@ -10,7 +10,6 @@ import {
 import { useForm } from '../../shared/hooks/form-hook';
 import './PlaceForm.css';
 
-<<<<<<< HEAD
 const DUMMY_PLACES = [
   {
     id: 'p1',
@@ -39,10 +38,6 @@ const DUMMY_PLACES = [
     creator: 'u2'
   }
 ];
-=======
-import './PlaceForm.css'
-
->>>>>>> af0c51264cd599971e94794c2845531cd0334c95
 
 const UpdatePlace = () => {
   const placeId = useParams().placeId;
@@ -63,45 +58,10 @@ const UpdatePlace = () => {
     true
   );
 
-<<<<<<< HEAD
   const placeUpdateSubmitHandler = event => {
     event.preventDefault();
     console.log(formState.inputs);
   };
-=======
-const UpdatePlace =()=>{
-    const placeId = useParams().placeId;
-    const identifiedPlace = DUMMY_PLACES.find(p=>p.id=== placeId);
-    if(!identifiedPlace){
-        return (
-            <div className="center">
-                <h2>Could not find place</h2>
-            </div>
-        );
-    }
-    return <form className="place-form">
-        <Input
-         id="title" 
-         element="input" 
-         type="text" 
-         lable="Title" 
-         validators={[VALIDATOR_REQUIRE()]}
-         errorText="Please enter a valid title"
-         onInput={()=>{}}
-         value={identifiedPlace.title}
-         valid={true}
-         />
-         <Input
-         id="description" 
-         element="textarea" 
-         lable="description" 
-         validators={[VALIDATOR_MINLENGTH(5)]}
-         errorText="Please enter a valid description (min. 5 characters)."
-         onInput={()=>{}}
-         value={identifiedPlace.description}
-         valid={true}
-         />
->>>>>>> af0c51264cd599971e94794c2845531cd0334c95
 
   if (!identifiedPlace) {
     return (
